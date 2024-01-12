@@ -1,0 +1,30 @@
+<html>
+<head>
+<title> Javascript </title>
+</head>
+<body>
+ 
+<p id="par1"> Enter the number </p>
+<input id="val1"/>
+<input id="val2"/>
+ 
+<button onclick="func1()">Click</button>
+<p id="para2"> </p>
+<script>
+function func1(){
+   var start=document.getElementById("val1").value;
+   var end=document.getElementById("val2").value;
+   var text="";
+   var result="";
+   for (var i = start; i <= end; i++) {
+         if(i%2 == 0)
+		    result = "even";
+		else
+            result= "odd";		
+      text += i+" = "+result  + "<br>";
+   }
+   document.getElementById("para2").innerHTML=text; 
+}
+</script>
+</body>
+</html>

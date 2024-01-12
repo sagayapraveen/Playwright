@@ -1,0 +1,32 @@
+<html>
+ 
+<head>
+    <title>
+        Playwright session
+    </title>
+	<script>
+	    function fun1(){
+		    document.getElementById('para1').innerHTML="Javascript Head block"
+		}
+	</script>
+</head>
+ 
+<body>
+	<center>
+    <h1>Welcome to Training</h1>
+	</center>
+	
+<br>
+<br>
+<br>
+<p id="para1">Use of Different javascript functions</p>
+<p id="para2"> </p>
+<p id="para3"> </p>
+
+<script>document.getElementById('para2').innerHTML="Javascript body block"</script>
+<button type="button" onclick="fun1()">Head block call</button>
+
+<button type="button" onclick="fun2()">Reference block call</button>
+<script src="script.js"></script>
+ 
+</html>

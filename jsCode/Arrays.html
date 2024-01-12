@@ -1,0 +1,165 @@
+<html>
+ 
+<head>
+    <title>
+        Arrays
+    </title>
+</head>
+ 
+<body>
+	<center>
+    <h1>Welcome to Training</h1>
+	</center>
+	
+<br>
+<br>
+
+<p id="para1"></p>
+<p id="para2"></p>
+
+
+<script>
+ 
+const car = ["hyndai","kia","honda","Maruthi"]
+document.write(car+"<br>"); //hyndai,kia,honda,Maruthi
+ 
+const mobile =[];
+mobile[0]="samsung";
+mobile[1]="Iphone";
+mobile[2]="poco";
+document.write(mobile+"<br>"); //samsung,Iphone,poco
+ 
+const laptop = new Array("Dell","HP","Mac");
+document.write(laptop+"<br>");//Dell,HP,Mac
+document.write(laptop[1]);//HP
+ 
+for(let i=0 ; i<laptop.length; i++){
+document.write(laptop[i]+"<br>");
+}
+ 
+laptop[2]="acer";
+for(let i=0 ; i<laptop.length; i++){
+document.write(laptop[i]+"<br>");
+ 
+}
+ 
+const person = {firstName:"Sai",lastName:"Goutham",age:28};
+document.write("<br>"+person.lastName+"<br>");//Goutham
+document.write(person[person.length]+"<br>");//undefined
+document.write(person.length+"<br>");//undefined
+document.write(person.age+"<br>");//28
+document.write(Array.isArray(person)+"<br>"); //false
+ 
+ 
+const array1 = [];
+array1[0]=laptop;
+array1[1]=car;
+ 
+//document.write(length(array1));
+document.write("<br>"+laptop[laptop.length-1]+"<br>");//acer
+document.write(car[car.length-1]+"<br>");//Maruthi
+ 
+laptop.push("Macpro");
+document.write(laptop+"<br>"); //Dell,HP,acer,Macpro
+ 
+laptop[laptop.length]="asus";
+document.write(laptop+"<br>");//Dell,HP,acer,Macpro,asus
+ 
+laptop[8]="vivo"
+document.write(laptop+"<br>");//Dell,HP,acer,Macpro,asus,,,,vivo
+ 
+laptop[10]="mac1";
+document.write(laptop+"<br>");//Dell,HP,acer,Macpro,asus,,,,vivo,,mac1
+ 
+document.write(laptop instanceof Array);//true
+
+document.write("<br>");
+document.write("<br>"+laptop.toString()+"<br>");//Dell,HP,acer,Macpro,asus,,,,vivo,,mac1
+document.write(laptop.join("*")+"<br>");//Dell*HP*acer*Macpro*asus****vivo**mac1
+document.write(laptop[-1]+"<br>");//undefined
+document.write(laptop.at(-1)+"<br>");//mac1
+ 
+ 
+document.write(laptop+"<br>");//Dell,HP,acer,Macpro,asus,,,,vivo,,mac1
+laptop.pop();
+document.write(laptop+"<br>");//Dell,HP,acer,Macpro,asus,,,,vivo,
+laptop.shift();
+document.write(laptop+"<br>");//HP,acer,Macpro,asus,,,,vivo,
+document.write(laptop[0]+"<br>");//HP
+ 
+laptop.unshift("mac1");
+document.write(laptop+"<br>");//mac1,HP,acer,Macpro,asus,,,,vivo,
+ 
+ 
+document.write(laptop.unshift("vi")+"<br>");//11
+document.write(laptop+"<br>");//vi,mac1,HP,acer,Macpro,asus,,,,vivo,
+ 
+document.write(laptop.concat(car)+"<br>");//vi,mac1,HP,acer,Macpro,asus,,,,vivo,,hyndai,kia,honda,Maruthi
+document.write(laptop+"<br>");//vi,mac1,HP,acer,Macpro,asus,,,,vivo,
+ 
+document.write(laptop.concat(car,mobile)+"<br>");//vi,mac1,HP,acer,Macpro,asus,,,,vivo,,hyndai,kia,honda,Maruthi,samsung,Iphone,poco
+ 
+document.write(laptop.concat("PlayWright")+"<br>");//vi,mac1,HP,acer,Macpro,asus,,,,vivo,,PlayWright
+ 
+document.write("<br>");
+document.write(car.copyWithin(2,0)+"<br>");//hyndai,kia,hyndai,kia
+document.write(car.copyWithin(2,0,1)+"<br>");//hyndai,kia,hyndai,kia
+ 
+car.splice(2,0,"ford","Renault");//hyndai,kia,ford,Renault,hyndai,kia
+document.write(car+"<br>");//hyndai,kia,ford,Renault,Renault,hyndai,kia
+ 
+ 
+car.splice(2,1,"ford","Renault");//hyndai,kia,ford,Renault,hyndai,kia
+document.write(car+"<br>");//hyndai,kia,Renault,hyndai,kia
+ 
+car.splice(3,1);//hyndai,kia,ford,Renault,hyndai,kia
+document.write(car+"<br>");//HP,acer,Macpro,asus,,,,vivo,
+
+document.write("<br>");
+const splicedcar = car.toSpliced(2,1);
+document.write(splicedcar+"<br>");//hyndai,kia,Renault,hyndai,kia
+document.write(car+"<br>");//hyndai,kia,ford,Renault,hyndai,kia
+
+document.write("<br>"); 
+const laptops = laptop.slice(2);
+document.write(laptops+"<br>");//HP,acer,Macpro,asus,,,,vivo,
+ 
+document.write("<br>");  
+const laptops1 = laptop.slice(3,6);
+document.write(laptops1+"<br>");//acer,Macpro,asus
+document.write(laptop+"<br>");//vi,mac1,HP,acer,Macpro,asus,,,,vivo,
+document.write(car.indexOf("honda")+"<br>");//-1
+ 
+document.write("<br>");  
+let position = car.indexOf("honda")+1;
+document.write(position+"<br>");//0
+document.write(car.indexOf("honda",5)+"<br>");//-1
+document.write(car.indexOf("honda",3)+"<br>");//-1
+document.write(car.indexOf("honda",-3)+"<br>");//-1
+
+
+document.write("<br>");  
+car.push("honda");
+document.write(car+"<br>");//hyndai,kia,ford,Renault,hyndai,kia,honda
+document.write(car.indexOf("honda")+"<br>");//6
+document.write(car.lastIndexOf("honda")+"<br>");//6
+document.write(car.lastIndexOf("honda",-2)+"<br>");//-1
+document.write(car.includes("jaquar")+"<br>");//false
+document.write(car.includes("ford")+"<br>");//true
+ 
+document.write("<br>"); 
+const number = [1,2,5,6,7];
+let first = number.find(fun1);
+let findex = number.findIndex(fun1);
+document.write(first+"<br>");
+function fun1(value,index,Array){
+return value>5;
+}//6
+ 
+document.write(findex+"<br>");//3
+
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<html>
+ 
+<head>
+    <title>
+        Display Program
+    </title>
+</head>
+ 
+<body>
+	<center>
+    <h1>Welcome to Training</h1>
+	</center>
+	
+<br>
+<br>
+
+<script>
+ class person{
+    constructor(name, age, country){
+	
+	this.name=name;
+	this.age=age;
+	this.country=country;
+	}
+	
+	display(){
+	 return this.name + " " +this.country;
+	 }
+	
+ }
+ 
+ const person1 = new person("Praveen", 28, "India");
+ const person2 = new person("Messi", 36, "Argnetina");
+ 
+ //person1.display = function(){ return this.name + " "+this.country+ "<br>" };
+ document.write(person1.display()+ "<br>" );
+ document.write(person2.display()+ "<br>" );
+
+</script>
+
+</body>
+
+</html>

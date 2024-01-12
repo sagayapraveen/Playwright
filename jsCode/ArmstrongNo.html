@@ -1,0 +1,47 @@
+<html>
+ 
+<head>
+    <title>
+        Amstrong
+    </title>
+</head>
+ 
+<body>
+	<center>
+    <h1>Welcome to Training</h1>
+	</center>
+	
+<br>
+<br>
+
+<p id="para1">Enter the no</p>
+<input id="val1"/>
+<button onclick="fun1()">Generate</button>
+<p id="para2"></p>
+
+
+<script>
+ function fun1(){
+   var no=document.getElementById("val1").value;
+   var temp = no;
+   console.log(no)
+   var result=0;
+   var rem = 0;
+      while(no>0){
+	    rem = no%10;
+		result =result + (rem ** 3)
+		no = parseInt(no/10);
+	  }
+	  
+
+	if(result == temp)
+   document.getElementById("para2").innerHTML="The given no is an armstrong no"; 
+   else
+   document.getElementById("para2").innerHTML="The given no is not an armstrong no"; 
+ }
+</script>
+
+
+
+</body>
+</html>

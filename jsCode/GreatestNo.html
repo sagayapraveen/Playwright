@@ -1,0 +1,43 @@
+<html>
+ 
+<head>
+    <title>
+        Greatest no
+    </title>
+</head>
+ 
+<body>
+	<center>
+    <h1>Welcome to Training</h1>
+	</center>
+	
+<br>
+<br>
+
+<p id="para1">Greatest no</p>
+<input id="val1"/>
+<input id="val2"/>
+<button onclick="fun1()">Generate</button>
+<p id="para2"></p>
+
+
+<script>
+ function fun1(){
+   var no1=document.getElementById("val1").value;
+   var no2=document.getElementById("val2").value;
+   var result ="";
+         if(no1 < no2)
+		    result = no2;
+		 else if (no2 < no1)
+            result = no1;
+         else
+            result = "Both number are equal";		 
+   
+   document.getElementById("para2").innerHTML=result; 
+ }
+</script>
+
+
+
+</body>
+</html>

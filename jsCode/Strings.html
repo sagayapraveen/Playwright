@@ -1,0 +1,71 @@
+<html>
+ 
+<head>
+    <title>
+        String
+    </title>
+</head>
+ 
+<body>
+	<center>
+    <h1>Welcome to Training</h1>
+	</center>
+	
+<br>
+<br>
+
+<p id="para1"></p>
+<p id="para2"></p>
+
+
+<script>
+let text="Welcome to Expleo. Expleo is a great company";
+document.write(text.length+"<br>");
+
+let text1='The manchester united football team are called "Red Devils"';
+document.write(text1+"<br>");
+
+let text2="The manchester united football team are called \"Red Devils\"";
+document.write(text2+"<br>");
+
+document.write(text2.charAt(1)+"<br>");
+document.write(text2.at(-3)+"<br>");
+document.write(text2.charCodeAt(2)+"<br>");
+
+document.write(text2.slice(4,14)+"<br>");
+document.write(text2.slice(4)+"<br>");
+
+document.write(text2.substring(4)+"<br>");
+document.write(text2.substring(4, 14)+"<br>");
+
+document.write(text2.substr(4,10)+"<br>");
+document.write(text2.substr(4)+"<br>");
+document.write(text2.substr(-12)+"<br>");
+
+
+document.write(text2.toUpperCase()+"<br>");
+document.write(text2.toLowerCase()+"<br>");
+
+let text3="     Praveen     ";
+document.write(text.concat(" ",text3)+"<br>");
+document.write(text3.trimStart()+1+"<br>"); //trim will reduce the space on both sides
+document.write(text3.trimEnd()+1+"<br>")
+
+let text4="Welcome";
+document.write(text4.padStart(9, "Z")+"<br>")
+document.write(text4.padEnd(9, "Z")+"<br>")
+
+let text5=(5).toString()
+document.write(text5.padStart(2, "Z")+"<br>")
+
+document.write(text4.repeat(3)+"<br>")
+
+document.write(text.replace(/ExplEo/i, "Playwright Training")+"<br>")
+document.write(text.replace(/Expleo/g, "Playwright Training")+"<br>")
+
+
+</script>
+
+</body>
+
+</html>

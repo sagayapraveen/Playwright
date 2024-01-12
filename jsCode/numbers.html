@@ -1,0 +1,61 @@
+<html>
+ 
+<head>
+    <title>
+        Numbers
+    </title>
+</head>
+ 
+<body>
+	<center>
+    <h1>Welcome to Training</h1>
+	</center>
+	
+<br>
+<br>
+
+<p id="para1"></p>
+<p id="para2"></p>
+
+
+<script>
+let x=12.345;
+document.write(x.toExponential()+"<br>");
+document.write(x.toExponential(6)+"<br>");
+document.write(x.toFixed(2)+"<br>");
+document.write(x.toFixed(6)+"<br>");
+document.write(x.toPrecision()+"<br>");
+document.write(x.toPrecision(4)+"<br>");
+document.write((15.13).valueOf()+"<br>");
+document.write(("15.13").valueOf()+"<br>");
+
+let a = 12.5;
+let b = 12;
+let c = "Expleo";
+let d = "123";
+let e = "17 20";
+let f = "209 Expleo";
+let g = "Expleo 1995";
+ 
+ 
+document.write(parseInt(a)+"<br>");
+document.write(parseInt(c)+"<br>");
+document.write(parseInt(e)+"<br>");
+document.write(parseInt(f)+"<br>");
+document.write(parseInt(g)+"<br>");
+ 
+// check it is number or not
+document.write(Number.isInteger(15)+"<br>");
+//document.write(a.isInetger()+"<br>");
+document.write(Number.isInteger(a)+"<br>");
+document.write(Number.isSafeInteger(9007199254740999)+"<br>");
+document.write(Number.isSafeInteger(9007199254740991)+"<br>");
+
+</script>
+
+
+
+
+</body>
+
+</html>

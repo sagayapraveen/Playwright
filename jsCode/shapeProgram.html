@@ -1,0 +1,60 @@
+<html>
+ 
+<head>
+    <title>
+        Rectangle program
+    </title>
+</head>
+ 
+<body>
+	<center>
+    <h1>Welcome to Training</h1>
+	</center>
+	
+<br>
+<br>
+
+<script>
+ class shape{	
+	area(){
+	 document.write("superclass method");
+	 }
+	
+ }
+ 
+  class triangle extends shape{
+    constructor(width, height){
+	 super();
+	 this.width=width;
+	 this.height=height;
+	}
+	
+	area(){
+	 return 0.5 * this.width * this.height;
+	 }
+	
+ }
+ 
+   class circle extends shape{
+			constructor(radius){
+				super();
+				this.radius = radius;
+			}
+			  area(){
+				return Math.PI * this.radius * this.radius;
+			}
+		}
+ 
+ 
+ 
+ const tri = new triangle(10, 20);
+ const cir= new circle(10);
+ 
+ document.write(tri.area()+ "<br>" );
+ document.write(cir.area()+ "<br>" );
+
+</script>
+
+</body>
+
+</html>
