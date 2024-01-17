@@ -105,15 +105,15 @@ document.write("<br>");
 document.write(car.copyWithin(2,0)+"<br>");//hyndai,kia,hyndai,kia
 document.write(car.copyWithin(2,0,1)+"<br>");//hyndai,kia,hyndai,kia
  
-car.splice(2,0,"ford","Renault");//hyndai,kia,ford,Renault,hyndai,kia
+car.splice(2,0,"ford","Renault");
+document.write(car+"<br>");//hyndai,kia,ford,Renault,hyndai,kia
+ 
+ 
+car.splice(2,1,"ford","Renault");
 document.write(car+"<br>");//hyndai,kia,ford,Renault,Renault,hyndai,kia
  
- 
-car.splice(2,1,"ford","Renault");//hyndai,kia,ford,Renault,hyndai,kia
-document.write(car+"<br>");//hyndai,kia,Renault,hyndai,kia
- 
-car.splice(3,1);//hyndai,kia,ford,Renault,hyndai,kia
-document.write(car+"<br>");//HP,acer,Macpro,asus,,,,vivo,
+car.splice(3,1);
+document.write(car+"<br>");//hyndai,kia,ford,Renault,hyndai,kia
 
 document.write("<br>");
 const splicedcar = car.toSpliced(2,1);
